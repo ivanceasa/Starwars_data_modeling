@@ -24,8 +24,6 @@ class Planet(Base):
     name = Column(String(30), nullable=False)
     population = Column(Integer, nullable=False)
     terrain = Column(String(30), nullable=False)
-    user_id = Column(Integer, ForeignKey('user.id'))
-    user = relationship(User)
 
 class Character(Base):
     __tablename__ = "character"
@@ -34,8 +32,6 @@ class Character(Base):
     gender = Column(String(30), nullable=False)
     hair_color = Column(String(30), nullable=False)
     eye_color = Column(String(30), nullable=False)  
-    user_id = Column(Integer, ForeignKey('user.id'))
-    user = relationship(User) 
 
 class Favorite(Base):
     __tablename__ = 'favorites'   
